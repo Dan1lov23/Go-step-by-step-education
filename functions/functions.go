@@ -1,0 +1,29 @@
+// functions practic
+
+package main
+
+import "fmt"
+
+func sum(a int, b int) (sum int) { // <-- you can set type fot return variables and just write return
+	return a + b
+}
+
+func endlessVarsSum(nums ...int) (sum int) { // <-- functions with unlimitade params
+
+	for _, nums := range nums {
+		sum += nums
+	}
+
+	return
+
+}
+
+func add(a int, b int, sumFunction func(int, int) int) (sum int) { // <-- function as function parameter
+	return sumFunction(a, b)
+}
+
+func main() {
+	fmt.Println(sum(1, 2))
+	fmt.Println(endlessVarsSum(1, 2, 3, 4, 5))
+	fmt.Println(add(1, 2, sum))
+}
