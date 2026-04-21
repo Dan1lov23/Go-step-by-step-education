@@ -26,4 +26,6 @@ func main() {
 	fmt.Println(sum(1, 2))
 	fmt.Println(endlessVarsSum(1, 2, 3, 4, 5))
 	fmt.Println(add(1, 2, sum))
+	aninonimSumFunction := func(a int, b int) int { return a + b } // <-- anonim sum function
+	fmt.Println(aninonimSumFunction(1, 2))
 }
