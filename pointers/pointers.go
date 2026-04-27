@@ -18,4 +18,11 @@ func main() {
 	*pointerN = 148
 	fmt.Println(pointerN)
 
+	var a, b, c = 1, 2, 3
+	var pointersArr [4]*int
+	pointersArr[0] = &a
+	pointersArr[1] = &b
+	pointersArr[2] = &c
+	fmt.Println(pointersArr)
+
 }
