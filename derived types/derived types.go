@@ -14,7 +14,7 @@ func addMile(distanceOne mile, distanceTwo mile) (distanceSum mile) {
 
 func main() {
 
-	var mileCounter mile // default value 0, because mile type it is int type, and int default value - 0
+	var mileCounter mile // <-- default value 0, because mile type it is int type, and int default value - 0
 	fmt.Println(mileCounter)
 
 	var distanceOne mile = 12
