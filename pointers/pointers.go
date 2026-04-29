@@ -2,6 +2,19 @@ package main
 
 import "fmt"
 
+func changeVarValue(x *int) {
+	*x = (*x) * (*x)
+}
+
+func createPointer(num int) *int { 
+
+	p := new(int)
+	*p = num
+
+	return p
+
+}
+
 func main() {
 
 	var x int = 4 // <-- number variable
@@ -25,4 +38,11 @@ func main() {
 	pointersArr[2] = &c
 	fmt.Println(pointersArr)
 
+	valueForChange := 5 // <-- before
+	fmt.Println(valueForChange)
+	changeVarValue(&valueForChange) // <-- function chnage variable value by using pointer
+	fmt.Println(valueForChange)     // <-- after
+
+	fmt.Println(createPointer(12)) // <-- pointer
+	fmt.Println(createPointer(18))
 }
