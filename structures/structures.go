@@ -65,7 +65,7 @@ func main() {
 	type adminStruct struct {
 		login        string
 		password     string
-		personalInfo perInf // struct as structer field
+		personalInfo perInf // struct as structer field 
 	}
 
 	var admin2 adminStruct = adminStruct{"bobLOL", "bob5t21376", perInf{"bob", "horse"}}
