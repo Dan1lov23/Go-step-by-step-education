@@ -10,10 +10,10 @@ type user struct {
 	id       int
 }
 
-type customerType struct{
-	firstname string
+type customerType struct {
+	firstname  string
 	secondname string
-	age int
+	age        int
 }
 
 func incrementAge(customer *customerType) {
@@ -40,10 +40,10 @@ func main() {
 
 	fmt.Println(admin)
 
-	type person struct{
-		login string
+	type person struct {
+		login  string
 		string // anonymous structure field (only 1 for 1 variables type else error)
-		id int
+		id     int
 	}
 
 	person1 := person{"Mike", "mikeLOL", 2}
@@ -56,5 +56,20 @@ func main() {
 	fmt.Println(customer1)
 	incrementAge(&customer1)
 	fmt.Println(customer1)
+
+	type perInf struct {
+		name    string
+		surname string
+	}
+
+	type adminStruct struct {
+		login        string
+		password     string
+		personalInfo perInf // struct as structer field
+	}
+
+	var admin2 adminStruct = adminStruct{"bobLOL", "bob5t21376", perInf{"bob", "horse"}}
+
+	fmt.Println(admin2)
 
 }
