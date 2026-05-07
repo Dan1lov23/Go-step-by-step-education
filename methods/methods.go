@@ -18,6 +18,15 @@ type userType struct {
 	password string
 }
 
+type person3 struct{
+	name string
+	age int
+}
+
+func (p *person3) update_age(new_age int){
+	p.age = new_age
+}
+
 func (user userType) chagePassword(newPassword string) (newUserProfile userType) {
 
 	return userType{user.username, newPassword}
@@ -34,4 +43,10 @@ func main() {
 	newUser1Profile := user1.chagePassword("Bob345!")
 	fmt.Println(newUser1Profile)
 
+	person3 := person3{"bob", 18}
+	person3P := &person3
+	fmt.Println("Before", person3)
+	person3P.update_age(33)
+	fmt.Println("After", person3)	
+	
 }
